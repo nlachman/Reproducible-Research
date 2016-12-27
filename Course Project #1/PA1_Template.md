@@ -94,7 +94,7 @@ text(x = 0,y=median(total_day$total_steps),pos=3,labels = "median")
 text(x = 0,y=mean(total_day$total_steps),pos=1,labels = "mean",col="red")
 ```
 
-![plot of chunk barplot](C:/Users/Nickolaus/Documents/R/Reproducible Research/barplot-1.png) 
+![plot of chunk barplot](C:/Users/Nickolaus/Documents/R/Reproducible-Research/Course Project #1/barplot-1.png) 
 
 ####  2. Make a histogram of the total number of steps taken each day
 
@@ -107,7 +107,7 @@ abline(v=median(total_day$total_steps),lty=3, lwd=2, col="black")
 legend(legend="median","topright",lty=3,lwd=2,bty = "n")
 ```
 
-![plot of chunk histogram](C:/Users/Nickolaus/Documents/R/Reproducible Research/histogram-1.png) 
+![plot of chunk histogram](C:/Users/Nickolaus/Documents/R/Reproducible-Research/Course Project #1/histogram-1.png) 
 
 #### 3. Calculate and report the mean and median of the total number of steps taken per day
 
@@ -133,7 +133,7 @@ axis(1,labels=daily_patterns$interval[seq(1,288,12)],
      at = seq_along(daily_patterns$interval)[seq(1,288,12)])
 ```
 
-![plot of chunk daily](C:/Users/Nickolaus/Documents/R/Reproducible Research/daily-1.png) 
+![plot of chunk daily](C:/Users/Nickolaus/Documents/R/Reproducible-Research/Course Project #1/daily-1.png) 
 
 #### 2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -222,7 +222,7 @@ abline(v=median(total_day$total_steps),lty=3, lwd=2, col="black")
 legend(legend="median","topright",lty=3,lwd=2,bty = "n")
 ```
 
-![plot of chunk histogram_no_NAs](C:/Users/Nickolaus/Documents/R/Reproducible Research/histogram_no_NAs-1.png) 
+![plot of chunk histogram_no_NAs](C:/Users/Nickolaus/Documents/R/Reproducible-Research/Course Project #1/histogram_no_NAs-1.png) 
 
 
 ```r
@@ -271,4 +271,4 @@ daily_patterns <- activity_without_NAs %>% mutate(day=factor(day,levels=c("weeke
 qplot(interval,average,data=daily_patterns,geom="line",facets=day~.)
 ```
 
-![plot of chunk weekend_comparison](C:/Users/Nickolaus/Documents/R/Reproducible Research/weekend_comparison-1.png) 
+![plot of chunk weekend_comparison](C:/Users/Nickolaus/Documents/R/Reproducible-Research/Course Project #1/weekend_comparison-1.png) 
